@@ -4,7 +4,12 @@
 Дополнен 20.09.2026 запросами `authority`, `trust`, `nofollow`.
 
 Запросы: `link`, `anchor`, `hyperlink`, `web graph`, `citation`, `PageRank`, `authority`,
-`trust`, `nofollow` · Диапазон: 2000–2026 · Расход: ~270 ГБ.
+`trust`, `nofollow`, `graph`, `spam`, `reputation`, `popularity` · Диапазон: 2000–2026 ·
+Расход: ~378 ГБ.
+
+> ⚠️ **Запрос `graph` обрезан лимитом** — вернул ровно 1000 строк и покрыл только
+> 2022–2026. Период 2000–2022 по этому термину не проверен; добор требует ещё ~27 ГБ
+> и выводит месячный расход за порог 400 ГБ, поэтому отложен до решения владельца.
 
 Предыдущая версия каталога собиралась из сохранённого CSV по одному термину `ranking`;
 эта версия заменяет её полным прогоном и снимает прежнюю пометку о неполноте.
@@ -82,6 +87,15 @@
 - **Scalable system for short paths:** `US-8825646-B1` → `US-9400849-B1`.
 - **Search result ranking based on trust:** `US-7603350-B1` (13.10.2009) → `US-8352467-B1`
   (08.01.2013) → `US-8818995-B1` (26.08.2014) → `US-10268641-B1`. Четыре публикации одной семьи.
+- **Detecting spam documents in a phrase based IR system:** `US-7603345-B2` (13.10.2009)
+  → `US-8078629-B2`. Изобретатель — Anna Lynn Patterson.
+- **Systems and methods for detecting click spam:** `US-7933984-B1` (26.04.2011) →
+  `US-8423640-B1` (16.04.2013); отдельно `US-8694374-B1` «Detecting click spam».
+- **Репутация автора:** `US-8150842-B2` (Kamvar, Brougher) и `US-8645396-B2`
+  (Bharat, Lawyer) — две линии одной идеи, к Agent Rank близки, но семьи разные.
+- **External verification of content popularity:** `US-9465871-B1` (11.10.2016) →
+  `US-10482105-B1`.
+- **Модель качества и популярности:** `US-11551150-B2` (10.01.2023) → `US-12236322-B2`.
 - **Reranking by graph representations:** `US-12511325-B2` — выданный патент; заявки `US-2026079992-A1`, `US-2025335486-A1`, `WO-2025226655-A1`.
 
 ## Отсеяно
@@ -136,6 +150,29 @@ unbonded access to a vehicle`, `System and method for delegating authority throu
 coupled devices`, `Verifying content distribution authority`, `Delegated authority
 evaluation system` — делегирование прав и сертификация, не авторитетность документа.
 
+**Шум по запросу `spam`** — 51 позиция из 63: почтовый спам (`Zero-minute virus and
+spam detection`, `System for determining email spam by delivery path`, семья Postini),
+спам в мультимедиа и соцсетях, `Map spam detection`, `Discovering spam merchants using
+product feed similarity`, CAPTCHA, спам-аккаунты по IP и cookie.
+
+**Шум по запросу `reputation`** — 30 позиций из 38: репутация отправителя почты
+(`Electronic message source reputation information system` и вся её семья),
+`Reputation Systems in Ride Share Platforms`, `User location reputation system`,
+`Reputation based collaboration session`.
+
+**Шум по запросу `popularity`** — 30 позиций из 36: `Recommending media programs based
+on media program popularity` (семья из десяти публикаций), телевизионные рейтинги,
+географическая популярность UGC, `Password popularity-based limiting of online account
+creation requests`.
+
+**Шум по запросу `graph`** — 636 позиций из 679 US: подавляющее большинство про
+графический интерфейс, а не про граф. `Providing composite graphical assistant
+interfaces`, `Presenting search results in a dynamically formatted graphical user
+interface`, `Techniques for presenting graphical content in a search result`. Плюс
+графовые нейросети (`Large-Scale Architecture Search in Graph Neural Networks`,
+`Neural architecture search through a graph search space`) — машинное обучение,
+не ранжирование документов.
+
 **Проверено по формуле и отсеяно:** `US-9098551-B1` — популярность сущностей,
 ссылок в формуле нет, карточка в `patents/other/`.
 
@@ -173,3 +210,11 @@ evaluation system` — делегирование прав и сертифика
 6. **`trust` и `authority` почти целиком про безопасность.** Из 338 строк по `trust`
    к ранжированию относятся четыре (одна семья), из 16 по `authority` — две.
    Термины рабочие, но требуют жёсткой чистки.
+7. **`graph` — почти чистый шум и при этом дорогой.** Из 679 US-строк 636 про
+   графический интерфейс: слово «graph» сидит внутри «graphical». Термин упёрся
+   в лимит 1000 и покрыл только 2022–2026. Если возвращаться к нему, брать сразу
+   `link graph` или `web-link graph`, а не голое `graph`.
+8. **`spam`, `reputation`, `popularity` дают по 5–12 релевантных строк каждый.**
+   Соотношение шума к делу примерно 5:1, но находки качественные: семья
+   phrase-based spam (Anna Patterson), репутация автора (Bharat, Kamvar),
+   `Correlating document topicality and popularity` (Singhal, Hölzle).
