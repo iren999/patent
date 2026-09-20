@@ -1,7 +1,10 @@
 # Каталог: ссылочное ранжирование
 
 Собран 20.09.2026. Источник: `search_patents` (Google Patents on BigQuery), assignee=google.
-Запросы: `link`, `anchor`, `hyperlink`, `web graph`, `citation`, `PageRank` · Диапазон: 2000–2026 · Расход: ~189 ГБ.
+Дополнен 20.09.2026 запросами `authority`, `trust`, `nofollow`.
+
+Запросы: `link`, `anchor`, `hyperlink`, `web graph`, `citation`, `PageRank`, `authority`,
+`trust`, `nofollow` · Диапазон: 2000–2026 · Расход: ~270 ГБ.
 
 Предыдущая версия каталога собиралась из сохранённого CSV по одному термину `ranking`;
 эта версия заменяет её полным прогоном и снимает прежнюю пометку о неполноте.
@@ -13,6 +16,7 @@
 | ⭐ | US-12511325-B2 | 30.12.2025 | Reranking documents based on graph representations of the documents | https://patents.google.com/patent/US12511325B2/en |
 | ⭐ | US-2025103662-A1 | 27.03.2025 | Unifying transformers with link based ranking | https://patents.google.com/patent/US2025103662A1/en |
 | ⭐ | US-10152520-B1 | 11.12.2018 | Ranking documents based on user behavior and/or feature data | https://patents.google.com/patent/US10152520B1/en |
+| ⭐ | US-10268641-B1 | 23.04.2019 | Search result ranking based on trust | https://patents.google.com/patent/US10268641B1/en |
 | ⭐ | US-9977816-B1 | 22.05.2018 | Link-based ranking of objects that do not include explicitly defined links | https://patents.google.com/patent/US9977816B1/en |
 | ⭐ | US-9953049-B1 | 24.04.2018 | Producing a ranking for pages using distances in a web-link graph | https://patents.google.com/patent/US9953049B1/en |
 | ⭐ | US-9165040-B1 | 20.10.2015 | Producing a ranking for pages using distances in a web-link graph | https://patents.google.com/patent/US9165040B1/en |
@@ -76,6 +80,8 @@
 - **Techniques for finding related hyperlinked documents:** `US-6754873-B1` → `US-7634716-B1`.
 - **Link based clustering:** `US-7213198-B1` → `US-8516357-B1`.
 - **Scalable system for short paths:** `US-8825646-B1` → `US-9400849-B1`.
+- **Search result ranking based on trust:** `US-7603350-B1` (13.10.2009) → `US-8352467-B1`
+  (08.01.2013) → `US-8818995-B1` (26.08.2014) → `US-10268641-B1`. Четыре публикации одной семьи.
 - **Reranking by graph representations:** `US-12511325-B2` — выданный патент; заявки `US-2026079992-A1`, `US-2025335486-A1`, `WO-2025226655-A1`.
 
 ## Отсеяно
@@ -116,6 +122,20 @@ result document based on data usage`, `Ranking search result documents based on 
 attributes`, `Adjusting search result rankings based on multiple user highlighting`,
 `Modifying ranking data based on document changes`, `Ranking user generated web content`.
 
+**Шум по запросу `trust`** — 227 позиций из 338: доверенные среды исполнения (TEE),
+`Validating an untrusted native code module`, `Securing a wireless mesh network via a
+chain of trust`, `Local trusted services manager for a contactless smart card`,
+сертификаты, ключи, биометрия, платежи. Отдельно: `Trusted maps: updating map locations
+using trust-based social graphs` — социальный граф карт, не веб-ссылки;
+`Trust-based video content evaluation` и `Evaluating Merchant Trustworthiness` — оценка
+контента и продавцов; `Trust agents` (семья из восьми публикаций) — агенты доверия
+в рекламе.
+
+**Шум по запросу `authority`** — 14 позиций из 16: `Central authority for certifying
+unbonded access to a vehicle`, `System and method for delegating authority through
+coupled devices`, `Verifying content distribution authority`, `Delegated authority
+evaluation system` — делегирование прав и сертификация, не авторитетность документа.
+
 **Проверено по формуле и отсеяно:** `US-9098551-B1` — популярность сущностей,
 ссылок в формуле нет, карточка в `patents/other/`.
 
@@ -142,3 +162,14 @@ attributes`, `Adjusting search result rankings based on multiple user highlighti
    `limit: 1000` (вернулось 752 строки, потолок не достигнут).
 3. **`citation` даёт ложные срабатывания** на ex**citation** — кубиты и антенны.
    Термин рабочий, но чистить выдачу нужно вручную.
+4. **Составной термин со словом, которое уже гоняли, не даёт ничего нового.** Поиск
+   идёт по подстроке, поэтому `link spam`, `link analysis`, `link quality`,
+   `inbound link` и `web-link graph` целиком вложены в прогон по `link`. Проверено
+   фильтрацией уже сохранённых выдач: новых патентов ноль. Перед новым запросом
+   смотри, не является ли он подстрокой уже выполненного — это экономит ~27 ГБ за раз.
+   В дополнении такая проверка сняла 5 запросов из 8 и сэкономила ~135 ГБ.
+5. **`nofollow` не находит ничего.** У Google нет ни одного патента с этим словом
+   в заголовке — атрибут описан в документации для вебмастеров, но не запатентован.
+6. **`trust` и `authority` почти целиком про безопасность.** Из 338 строк по `trust`
+   к ранжированию относятся четыре (одна семья), из 16 по `authority` — две.
+   Термины рабочие, но требуют жёсткой чистки.
