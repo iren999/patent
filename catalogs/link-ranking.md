@@ -201,6 +201,14 @@ interface`, `Techniques for presenting graphical content in a search result`. П
 
 ## Уже разобрано в карточки
 
+- [[US-8407231]] — `patents/link-ranking/` · историко-данные, динамика ссылочного профиля
+- [[US-8127220]] — `patents/link-ranking/` · оценка исходящих ссылок, Ларри Пейдж в авторах
+- [[US-8719276]] — `patents/link-ranking/` · аффилированность, деление голоса на размер сетки
+- [[US-8250114]] — `patents/link-ranking/` · линкспам через производную важности
+- [[US-7260573]] — `patents/link-ranking/` · персонализированный вес анкора
+- [[US-2025103662]] — `patents/link-ranking/` · статические сигналы в матрице внимания
+- [[US-10268641]] — `patents/other/` · **не ссылочное**: ручные оценки доверия и аннотации
+- [[US-12511325]] — `patents/other/` · **не ссылочное**: граф смыслов внутри документа, не веб-граф
 - [[US-8959093]] — `patents/link-ranking/`
 - [[US-9165040]] — `patents/link-ranking/`
 - [[US-9953049]] — `patents/link-ranking/`
