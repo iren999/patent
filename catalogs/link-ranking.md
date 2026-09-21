@@ -45,15 +45,23 @@
 |  | US-10152557-B2 | 11.12.2018 | Efficient similarity ranking for bipartite graphs | https://patents.google.com/patent/US10152557B2/en |
 |  | US-9400849-B1 | 26.07.2016 | Scalable system for determining short paths within web link network | https://patents.google.com/patent/US9400849B1/en |
 |  | US-9298777-B2 | 29.03.2016 | Personalization of web search results using term, category, and link-based user profiles | https://patents.google.com/patent/US9298777B2/en |
+|  | US-9282092-B1 | 08.03.2016 | Systems and methods for determining trust when interacting with online resources | https://patents.google.com/patent/US9282092B1/en |
 |  | US-9208229-B2 | 08.12.2015 | Anchor text summarization for corroboration | https://patents.google.com/patent/US9208229B2/en |
+|  | US-9154491-B1 | 06.10.2015 | Trust modeling | https://patents.google.com/patent/US9154491B1/en |
 |  | US-9098582-B1 | 04.08.2015 | Identifying relevant document languages through link context | https://patents.google.com/patent/US9098582B1/en |
 |  | US-8892596-B1 | 18.11.2014 | Identifying related documents based on links in documents | https://patents.google.com/patent/US8892596B1/en |
 |  | US-8825645-B1 | 02.09.2014 | Determining quality of linked documents | https://patents.google.com/patent/US8825645B1/en |
+|  | US-8645396-B2 | 04.02.2014 | Reputation scoring of an author | https://patents.google.com/patent/US8645396B2/en |
 |  | US-8615508-B2 | 24.12.2013 | Artificial anchor for a document | https://patents.google.com/patent/US8615508B2/en |
 |  | US-8612411-B1 | 17.12.2013 | Clustering documents using citation patterns | https://patents.google.com/patent/US8612411B1/en |
+|  | US-8595225-B1 | 26.11.2013 | Systems and methods for correlating document topicality and popularity | https://patents.google.com/patent/US8595225B1/en |
 |  | US-8522128-B1 | 27.08.2013 | Systems and methods for modifying the order of links presented in a document | https://patents.google.com/patent/US8522128B1/en |
 |  | US-8516357-B1 | 20.08.2013 | Link based clustering of hyperlinked documents | https://patents.google.com/patent/US8516357B1/en |
 |  | US-8495483-B1 | 23.07.2013 | Using text surrounding hypertext links when indexing and generating page summaries | https://patents.google.com/patent/US8495483B1/en |
+|  | US-8458196-B1 | 04.06.2013 | System and method for determining topic authority | https://patents.google.com/patent/US8458196B1/en |
+|  | US-8452746-B2 | 28.05.2013 | Detecting spam search results for context processed search queries | https://patents.google.com/patent/US8452746B2/en |
+|  | US-8150842-B2 | 03.04.2012 | Reputation of an author of online content | https://patents.google.com/patent/US8150842B2/en |
+|  | US-8078629-B2 | 13.12.2011 | Detecting spam documents in a phrase based information retrieval system | https://patents.google.com/patent/US8078629B2/en |
 |  | US-7590628-B2 | 15.09.2009 | Determining document subject by using title and anchor text of related documents | https://patents.google.com/patent/US7590628B2/en |
 |  | US-7308643-B1 | 11.12.2007 | Anchor tag indexing in a web crawler system | https://patents.google.com/patent/US7308643B1/en |
 |  | US-2005149851-A1 | 07.07.2005 | Generating hyperlinks and anchor text in HTML and non-HTML documents | https://patents.google.com/patent/US2005149851A1/en |
@@ -63,16 +71,25 @@
 
 | № | Номер | Дата | Название | Ссылка |
 |---|---|---|---|---|
+|  | US-12236322-B2 | 25.02.2025 | Training and/or utilizing a model for predicting measures reflecting both quality and popularity of content | https://patents.google.com/patent/US12236322B2/en |
 |  | US-10970293-B2 | 06.04.2021 | Ranking search result documents | https://patents.google.com/patent/US10970293B2/en |
 |  | US-10496652-B1 | 03.12.2019 | Methods and apparatus for ranking documents | https://patents.google.com/patent/US10496652B1/en |
+|  | US-10482105-B1 | 19.11.2019 | External verification of content popularity | https://patents.google.com/patent/US10482105B1/en |
 |  | US-10394832-B2 | 27.08.2019 | Ranking search results documents | https://patents.google.com/patent/US10394832B2/en |
 |  | US-10268732-B2 | 23.04.2019 | Ranking native applications and native application deep links | https://patents.google.com/patent/US10268732B2/en |
 |  | US-10055461-B1 | 21.08.2018 | Ranking documents based on large data sets | https://patents.google.com/patent/US10055461B1/en |
 |  | US-9477714-B1 | 25.10.2016 | Methods and apparatus for ranking documents | https://patents.google.com/patent/US9477714B1/en |
 |  | US-9448994-B1 | 20.09.2016 | Grammar extraction using anchor text | https://patents.google.com/patent/US9448994B1/en |
 |  | US-9305099-B1 | 05.04.2016 | Ranking documents based on user behavior and/or feature data | https://patents.google.com/patent/US9305099B1/en |
+|  | US-9195987-B2 | 24.11.2015 | Systems and methods of correlating business information to determine spam, closed businesses, and ranking signals | https://patents.google.com/patent/US9195987B2/en |
 |  | US-9116976-B1 | 25.08.2015 | Ranking documents based on large data sets | https://patents.google.com/patent/US9116976B1/en |
+|  | US-9083696-B1 | 14.07.2015 | Trusted peer-based information verification system | https://patents.google.com/patent/US9083696B1/en |
+|  | US-8898800-B1 | 25.11.2014 | Mechanism for establishing the trust tree | https://patents.google.com/patent/US8898800B1/en |
 |  | US-8812478-B1 | 19.08.2014 | Distributed crawling of hyperlinked documents | https://patents.google.com/patent/US8812478B1/en |
+|  | US-8694374-B1 | 08.04.2014 | Detecting click spam | https://patents.google.com/patent/US8694374B1/en |
+|  | US-2013282699-A1 | 24.10.2013 | Using Authority Website to Measure Accuracy of Business Information | https://patents.google.com/patent/US2013282699A1/en |
+|  | US-7827052-B2 | 02.11.2010 | Systems and methods for reputation management | https://patents.google.com/patent/US7827052B2/en |
+|  | US-7743045-B2 | 22.06.2010 | Detecting spam related and biased contexts for programmable search engines | https://patents.google.com/patent/US7743045B2/en |
 
 ## Родство семей
 
